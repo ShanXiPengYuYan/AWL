@@ -1,0 +1,33 @@
+DATA:
+  VOX1_DATA_PATH: 'your_dataset_path/vox1/wav'
+  VOX2_DATA_PATH: 'your_dataset_path/vox2/wav'
+  TEST_DATA_PATH: 'your_dataset_path/vox1/wav'
+  DATASET: ['vox2dev']
+  N_MELS: 64
+  MAX_FRAMES: 200
+  N_PER_SPEAKER: 1
+MODEL:
+  TYPE: TDNN
+  NAME: ECAPATDNN
+  AGGREGATION: ASP
+  EMB_SIZE: 192
+  LOSS:
+    NAME: 'awlsoftmax'
+    MARGIN: 0.2
+    SCALE: 30
+TRAIN:
+  EPOCHS: 120
+  LR: 2e-3
+  BATCH_SIZE: 256
+  SCHEDULER:
+    NAME: cosinelr
+    STEPLR:
+      LR_STEP: iteration
+TEST:
+  BATCH_SIZE: 25
+  DATASET: ['O']
+AUG:
+  FLAG: True
+  MUSAN_PATH: 'your_dataset_path/vox1/wav/musan_split'
+  RIR_PATH: 'your_dataset_path/vox1/wav/simulated_rirs'
+SAVE: True
