@@ -9,7 +9,7 @@ Half-ResNet with AWLloss:
 ```
 ## Eval Examples
 Loading weight files with `--resume`.<br>
-In `configs/*.yaml`In the Config file, the `DATASET` section in `TEST`, `['O'], ['E'], ['H'], ['sitw']` represent the evaluation sets VoxCeleb-O, VoxCeleb-E, VoxCeleb-H, SITW respectively
+In the `configs/*.yaml`, the `DATASET` section in `TEST`, `['O'], ['E'], ['H'], ['sitw']` represent the evaluation sets VoxCeleb-O, VoxCeleb-E, VoxCeleb-H, SITW respectively
 ```
  python trainSpeakerNet.py --cfg configs/HalfResNet_emb256.yml --resume weights/vox2/weights-HalfResNet-awlloss.pt --gpu 0,1
 ```
