@@ -1,0 +1,38 @@
+DATA:
+  VOX1_DATA_PATH: '/export/chenjunyu/dataset/vox1/wav'
+  VOX2_DATA_PATH: '/export/chenjunyu/dataset/vox2/wav'
+  TEST_DATA_PATH: '/export/chenjunyu/dataset/vox1/wav'
+  DATASET: ['vox1dev']
+  N_MELS: 64
+  MAX_FRAMES: 200
+  N_PER_SPEAKER: 1
+MODEL:
+  TYPE: ResNet
+  NAME: ResNet34
+  RESNET:
+    DEPTHS: [3, 4, 6, 3]
+    DIMS: [32, 64, 128, 256]
+  AGGREGATION: ASP
+  EMB_SIZE: 256
+  LOSS:
+    NAME: 'awlsoftmax'
+    MARGIN: 0.2
+    SCALE: 30
+TRAIN:
+  EPOCHS: 120
+  LR: 2e-3
+  BATCH_SIZE: 256
+  START_EPOCH: 0
+  WARMUP_EPOCH: 1
+  SCHEDULER:
+    NAME: cosinelr
+    STEPLR:
+      LR_STEP: iteration
+TEST:
+  BATCH_SIZE: 25
+  DATASET: ['O']
+AUG:
+  FLAG: True
+  MUSAN_PATH: '/export/chenjunyu/dataset/musan_split'
+  RIR_PATH: '/export/chenjunyu/dataset/RIRS_NOISES/simulated_rirs'
+SAVE: True
