@@ -1,7 +1,7 @@
 DATA:
-  VOX1_DATA_PATH: '/export/chenjunyu/dataset/vox1/wav'
-  VOX2_DATA_PATH: '/export/chenjunyu/dataset/vox2/wav'
-  TEST_DATA_PATH: '/export/chenjunyu/dataset/vox1/wav'
+  VOX1_DATA_PATH: 'your_dataset_path/vox1/wav'
+  VOX2_DATA_PATH: 'your_dataset_path/vox2/wav'
+  TEST_DATA_PATH: 'your_dataset_path/vox1/wav'
   DATASET: ['vox1dev']
   N_MELS: 64
   MAX_FRAMES: 200
@@ -33,6 +33,6 @@ TEST:
   DATASET: ['O']
 AUG:
   FLAG: True
-  MUSAN_PATH: '/export/chenjunyu/dataset/musan_split'
-  RIR_PATH: '/export/chenjunyu/dataset/RIRS_NOISES/simulated_rirs'
+  MUSAN_PATH: 'your_dataset_path/musan_split'
+  RIR_PATH: 'your_dataset_path/simulated_rirs'
 SAVE: True
