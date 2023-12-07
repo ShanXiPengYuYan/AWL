@@ -18,10 +18,13 @@ In the `configs/*.yaml`, the `DATASET` section in `TEST`, `['O'], ['E'], ['H'], 
 Please cite [1] if you make use of the code. <br>
 [1] AWLloss: Speaker Verifcation Based on the Quality and Diffculty of Speech
 ```
-@article{liu2023awlloss,
-  title={AWLloss: Speaker Verification Based on the Quality and Difficulty of Speech},
+@ARTICLE{10246987,
   author={Liu, Qian and Zhang, Xia and Liang, Xinyan and Qian, Yuhua and Yao, Shanshan},
+  journal={IEEE Signal Processing Letters}, 
+  title={AWLloss: Speaker Verification Based on the Quality and Difficulty of Speech}, 
   year={2023},
-  publisher={TechRxiv}
-}
+  volume={30},
+  number={},
+  pages={1337-1341},
+  doi={10.1109/LSP.2023.3314371}}
 ```
